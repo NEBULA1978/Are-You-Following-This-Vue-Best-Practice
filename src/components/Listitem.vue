@@ -1,6 +1,6 @@
 <template>
-    <li :class="{ active: id === activeId }">
-        {{ activeId === id ? msg : '' }}
+    <li :class="{ active: isActive }">
+        {{ msg }}
     </li>
 </template>
 
@@ -15,8 +15,7 @@
 import { defineProps } from 'vue';
 
 const props = defineProps({
-    id: Number,
     msg: String,
-    activeId: Number,
+    isActive: Boolean,
 });
 </script>

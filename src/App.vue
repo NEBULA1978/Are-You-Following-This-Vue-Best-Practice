@@ -6,7 +6,7 @@
   <main>
     <button @click="changeActiveItem">Pulsar</button>
     <ul>
-      <Listitem v-for="msg in arr" :key="msg.id" :id="msg.id" :msg="msg.msg" :activeId="activeId" />
+      <Listitem v-for="msg in arr" :key="msg.id" :msg="msg.msg" :isActive="activeId === msg.id" />
     </ul>
   </main>
 </template>
